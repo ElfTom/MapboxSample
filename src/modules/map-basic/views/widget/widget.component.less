@@ -1,0 +1,24 @@
+.container {
+  width: 100%;
+  height: 100%;
+
+  .widget-operation {
+    width: 100%;
+    height: 56px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+
+    >nz-select {
+      width: 120px;
+    }
+  }
+
+  #mapContainer {
+    width: 100%;
+    height: calc(100% - 56px);
+    overflow: hidden;
+  }
+}

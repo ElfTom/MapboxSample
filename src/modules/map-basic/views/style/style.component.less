@@ -1,0 +1,24 @@
+.container {
+  width: 100%;
+  height: 100%;
+
+  .style-select {
+    width: 100%;
+    height: 56px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+
+    nz-select {
+      width: 196px;
+      margin-left: 16px;
+    }
+  }
+
+  #mapContainer {
+    width: 100%;
+    height: calc(100% - 56px);
+    overflow: hidden;
+  }
+}

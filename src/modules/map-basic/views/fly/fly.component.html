@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="fly-operation">
+    <div>
+      <div>选择地点</div>
+      <nz-select [(ngModel)]="selectedSite" (ngModelChange)="handleSiteSelect()">
+        <nz-option *ngFor="let site of siteList" [nzValue]="site" [nzTitle]="site.name" [nzLabel]="site.name"
+                   [nzDisabled]="site===selectedSite"/>
+      </nz-select>
+    </div>
+    <div>
+      <div>漫游</div>
+      <nz-switch [(ngModel)]="isFlyOpened"></nz-switch>
+    </div>
+  </div>
+
+  <div id="mapContainer"></div>
+</div>

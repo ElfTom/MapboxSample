@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="angle-operation">
+    <div class="settings-item">
+      <div>方位角</div>
+      <nz-slider [nzMin]="0" [nzMax]="360" [(ngModel)]="bearing" (ngModelChange)="handleBearingChange()"></nz-slider>
+    </div>
+    <div class="settings-item">
+      <div>俯仰角</div>
+      <nz-slider [nzMin]="0" [nzMax]="85" [(ngModel)]="pitch" (ngModelChange)="handlePitchChange()"></nz-slider>
+    </div>
+    <div class="settings-item">
+      <div>缩放级别</div>
+      <nz-slider [nzMin]="0" [nzMax]="22" [(ngModel)]="zoom" (ngModelChange)="handleZoomChange()"></nz-slider>
+    </div>
+  </div>
+
+  <div id="mapContainer"></div>
+</div>

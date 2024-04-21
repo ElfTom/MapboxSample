@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="control-operation">
+    <div class="control-item">
+      <div>双击缩放</div>
+      <nz-switch [(ngModel)]="doubleClickZoom" (ngModelChange)="handleDoubleClickZoomChange()"/>
+    </div>
+    <div class="control-item">
+      <div>拖拽平移</div>
+      <nz-switch [(ngModel)]="dragPan" (ngModelChange)="handleDragPanChange()"/>
+    </div>
+  </div>
+
+  <div class="sub-title" *ngIf="!isMobile">PC鼠标键盘控制</div>
+  <div class="control-operation" *ngIf="!isMobile">
+    <div class="control-item">
+      <div>鼠标滚轮缩放</div>
+      <nz-switch [(ngModel)]="scrollZoom" (ngModelChange)="handleScrollZoomChange()"/>
+    </div>
+    <div class="control-item">
+      <div>鼠标俯仰旋转</div>
+      <nz-switch [(ngModel)]="dragRotate" (ngModelChange)="handleDragRotateChange()"/>
+    </div>
+    <div class="control-item">
+      <div>键盘全部控制</div>
+      <nz-switch [(ngModel)]="keyboard" (ngModelChange)="handleKeyboardChange()"/>
+    </div>
+    <div class="control-item">
+      <div>键盘俯仰旋转</div>
+      <nz-switch [(ngModel)]="keyboardPitchRotate" (ngModelChange)="handleKeyboardPitchRotateChange()"
+                 [nzDisabled]="!keyboard"/>
+    </div>
+  </div>
+
+  <div class="sub-title" *ngIf="isMobile">移动屏幕触摸控制</div>
+  <div class="control-operation" *ngIf="isMobile">
+    <div class="control-item">
+      <div>触控俯仰</div>
+      <nz-switch [(ngModel)]="touchPitch" (ngModelChange)="handleTouchPitchChange()"/>
+    </div>
+    <div class="control-item">
+      <div>触控缩放旋转</div>
+      <nz-switch [(ngModel)]="touchZoomRotate" (ngModelChange)="handleTouchZoomRotateChange()"/>
+    </div>
+    <div class="control-item">
+      <div>触控旋转</div>
+      <nz-switch [(ngModel)]="touchRotate" (ngModelChange)="handleTouchRotateChange()" [nzDisabled]="!touchZoomRotate"/>
+    </div>
+  </div>
+
+  <div id="mapContainer"></div>
+</div>

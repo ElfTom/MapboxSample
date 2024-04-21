@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="style-select">
+    <div>选择样式</div>
+    <nz-select [(ngModel)]="selectedMapStyle" (ngModelChange)="handleStyleSelect()">
+      <nz-option *ngFor="let style of styleList" [nzValue]="style" [nzTitle]="style.name" [nzLabel]="style.name" />
+    </nz-select>
+  </div>
+
+  <div id="mapContainer"></div>
+</div>

@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="widget-operation">
+    <nz-select [(ngModel)]="selectedType">
+      <nz-option *ngFor="let type of typeList" [nzValue]="type" [nzTitle]="type" [nzLabel]="type" />
+    </nz-select>
+    <nz-select [(ngModel)]="selectedPosition">
+      <nz-option *ngFor="let position of positionList" [nzValue]="position" [nzTitle]="position" [nzLabel]="position" />
+    </nz-select>
+    <button nz-button nzType="primary" (click)="handleAddWidget()">添加控件</button>
+  </div>
+
+  <div id="mapContainer"></div>
+</div>
