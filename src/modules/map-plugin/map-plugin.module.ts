@@ -7,11 +7,10 @@ import {CompareComponent} from './views/compare/compare.component';
 import {MapPluginMenuComponent} from './components/map-plugin-menu/map-plugin-menu.component';
 import {DrawComponent} from './views/draw/draw.component';
 import {ExportComponent} from './views/export/export.component';
-import { InfoboxComponent } from './views/infobox/infobox.component';
-import { StyleSwitchComponent } from './views/style-switch/style-switch.component';
-import { MinimapComponent } from './views/minimap/minimap.component';
-import {NzTransitionPatchDirective} from "ng-zorro-antd/core/transition-patch/transition-patch.directive";
-import {NzWaveDirective} from "ng-zorro-antd/core/wave";
+import {InfoboxComponent} from './views/infobox/infobox.component';
+import {StyleSwitchComponent} from './views/style-switch/style-switch.component';
+import {MinimapComponent} from './views/minimap/minimap.component';
+import {AnimatedPopComponent} from './views/animated-pop/animated-pop.component';
 
 const routes: Routes = [
   {
@@ -37,6 +36,10 @@ const routes: Routes = [
   {
     path: 'minimap',
     component: MinimapComponent
+  },
+  {
+    path: 'animated-pop',
+    component: AnimatedPopComponent
   }
 ];
 
@@ -48,14 +51,13 @@ const routes: Routes = [
     ExportComponent,
     InfoboxComponent,
     StyleSwitchComponent,
-    MinimapComponent
+    MinimapComponent,
+    AnimatedPopComponent
   ],
   imports: [
     CommonModule,
     NzButtonComponent,
-    RouterModule.forChild(routes),
-    NzTransitionPatchDirective,
-    NzWaveDirective
+    RouterModule.forChild(routes)
   ],
   exports: [
     MapPluginMenuComponent
