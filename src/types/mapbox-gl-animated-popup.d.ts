@@ -1,1 +1,1 @@
-declare module 'mapbox-gl-animated-popup'
+declare module 'mapbox-gl-animated-popup';

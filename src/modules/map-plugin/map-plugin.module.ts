@@ -7,7 +7,6 @@ import {CompareComponent} from './views/compare/compare.component';
 import {MapPluginMenuComponent} from './components/map-plugin-menu/map-plugin-menu.component';
 import {DrawComponent} from './views/draw/draw.component';
 import {ExportComponent} from './views/export/export.component';
-import {InfoboxComponent} from './views/infobox/infobox.component';
 import {StyleSwitchComponent} from './views/style-switch/style-switch.component';
 import {MinimapComponent} from './views/minimap/minimap.component';
 import {AnimatedPopComponent} from './views/animated-pop/animated-pop.component';
@@ -24,10 +23,6 @@ const routes: Routes = [
   {
     path: 'export',
     component: ExportComponent
-  },
-  {
-    path: 'infobox',
-    component: InfoboxComponent
   },
   {
     path: 'style-switch',
@@ -49,7 +44,6 @@ const routes: Routes = [
     MapPluginMenuComponent,
     DrawComponent,
     ExportComponent,
-    InfoboxComponent,
     StyleSwitchComponent,
     MinimapComponent,
     AnimatedPopComponent
