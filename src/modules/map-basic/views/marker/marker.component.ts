@@ -8,7 +8,7 @@ import {ConstantService} from "../../../../services/constant.service";
   templateUrl: './marker.component.html',
   styleUrl: './marker.component.less'
 })
-export class MarkerComponent  implements AfterViewInit {
+export class MarkerComponent implements AfterViewInit {
   // 地图
   map?: mapboxgl.Map
   // 标记信息列表

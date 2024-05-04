@@ -16,6 +16,7 @@ import {ControlComponent} from './views/control/control.component';
 import {WidgetComponent} from './views/widget/widget.component';
 import {MarkerComponent} from './views/marker/marker.component';
 import {EventComponent} from './views/event/event.component';
+import {ProjectionComponent} from './views/projection/projection.component';
 
 const routes: Routes = [
   {
@@ -49,8 +50,12 @@ const routes: Routes = [
   {
     path: 'event',
     component: EventComponent
-  }
-]
+  },
+  {
+    path: 'projection',
+    component: ProjectionComponent
+  },
+];
 
 @NgModule({
   declarations: [
@@ -62,7 +67,8 @@ const routes: Routes = [
     ControlComponent,
     WidgetComponent,
     MarkerComponent,
-    EventComponent
+    EventComponent,
+    ProjectionComponent
   ],
   imports: [
     CommonModule,

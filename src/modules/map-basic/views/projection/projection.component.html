@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="projection-select">
+    <div>选择投影</div>
+    <nz-select [(ngModel)]="selectedProjection" (ngModelChange)="handleProjectionSelect()">
+      <nz-option *ngFor="let style of projectionList" [nzValue]="style" [nzTitle]="style.name" [nzLabel]="style.name" />
+    </nz-select>
+  </div>
+
+  <div id="mapContainer"></div>
+</div>

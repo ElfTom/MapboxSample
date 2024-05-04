@@ -4,6 +4,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {SplashComponent} from "./views/splash/splash.component";
 import {HomeComponent} from "./views/home/home.component";
 import {MapBasicModule} from "../map-basic/map-basic.module";
+import {MapPluginModule} from "../map-plugin/map-plugin.module";
 import {NgOptimizedImage} from "@angular/common";
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
     CommonModule,
     NgOptimizedImage,
     MapBasicModule,
+    MapPluginModule,
     RouterModule.forChild(routes)
   ]
 })

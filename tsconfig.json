@@ -21,8 +21,12 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "allowJs": true
   },
+  "include": [
+    "./src/assets/lib/mapboxgl-control-minimap.js"
+  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
