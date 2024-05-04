@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="light-preset">
+    <div>选择光源</div>
+    <nz-select [(ngModel)]="selectedLightPreset" (ngModelChange)="handleLightPresetSelect()">
+      <nz-option *ngFor="let preset of lightPresetList" [nzValue]="preset" [nzTitle]="preset.name" [nzLabel]="preset.name" />
+    </nz-select>
+  </div>
+  <div class="config-menu">
+    <div class="menu-item">
+      <div>Place labels</div>
+      <nz-switch [(ngModel)]="showPlaceLabels" (ngModelChange)="handleConfigItemChange('place')" />
+    </div>
+    <div class="menu-item">
+      <div>POI labels</div>
+      <nz-switch [(ngModel)]="showPOILabels" (ngModelChange)="handleConfigItemChange('poi')" />
+    </div>
+    <div class="menu-item">
+      <div>Road labels</div>
+      <nz-switch [(ngModel)]="showRoadLabels" (ngModelChange)="handleConfigItemChange('road')" />
+    </div>
+    <div class="menu-item">
+      <div>Transit labels</div>
+      <nz-switch [(ngModel)]="showTransitLabels" (ngModelChange)="handleConfigItemChange('transit')" />
+    </div>
+  </div>
+
+  <div id="mapContainer"></div>
+</div>

@@ -1,0 +1,43 @@
+.container {
+  width: 100%;
+  height: 100%;
+
+  .light-preset {
+    width: 100%;
+    height: 56px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+
+    nz-select {
+      width: 196px;
+      margin-left: 16px;
+    }
+  }
+
+  .config-menu {
+    width: 100%;
+    padding: 0 12px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+
+    >.menu-item {
+      flex-basis: 50%;
+      display: flex;
+      height: 40px;
+      align-items: center;
+
+      nz-switch {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  #mapContainer {
+    width: 100%;
+    height: calc(100% - 136px);
+    overflow: hidden;
+  }
+}

@@ -17,6 +17,8 @@ import {WidgetComponent} from './views/widget/widget.component';
 import {MarkerComponent} from './views/marker/marker.component';
 import {EventComponent} from './views/event/event.component';
 import {ProjectionComponent} from './views/projection/projection.component';
+import {AtmosphereComponent} from './views/atmosphere/atmosphere.component';
+import { StyleConfigComponent } from './views/style-config/style-config.component';
 
 const routes: Routes = [
   {
@@ -26,6 +28,10 @@ const routes: Routes = [
   {
     path: 'style',
     component: StyleComponent
+  },
+  {
+    path: 'style-config',
+    component: StyleConfigComponent
   },
   {
     path: 'angle',
@@ -55,6 +61,10 @@ const routes: Routes = [
     path: 'projection',
     component: ProjectionComponent
   },
+  {
+    path: 'atmosphere',
+    component: AtmosphereComponent
+  }
 ];
 
 @NgModule({
@@ -68,7 +78,9 @@ const routes: Routes = [
     WidgetComponent,
     MarkerComponent,
     EventComponent,
-    ProjectionComponent
+    ProjectionComponent,
+    AtmosphereComponent,
+    StyleConfigComponent
   ],
   imports: [
     CommonModule,
