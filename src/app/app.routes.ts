@@ -15,6 +15,10 @@ export const routes: Routes = [
     loadChildren: () => import('../modules/map-basic/map-basic.module').then(m => m.MapBasicModule)
   },
   {
+    path: 'map-layer',
+    loadChildren: () => import('../modules/map-layer/map-layer.module').then(m => m.MapLayerModule)
+  },
+  {
     path: 'map-plugin',
     loadChildren: () => import('../modules/map-plugin/map-plugin.module').then(m => m.MapPluginModule)
   }
